@@ -31,8 +31,12 @@ code {
   border-radius: 5px;
 }
 
+.title {
+  font-size: 1em;
+}
 .subtitle {
   color: darkgrey;
+  font-size: 0.9em;
 }
 
 .textarea {

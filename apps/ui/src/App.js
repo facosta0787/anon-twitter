@@ -29,6 +29,8 @@ function App() {
       data,
       ...tweets
     ])
+
+    setTextTweet('')
   }
 
   return (
@@ -41,7 +43,7 @@ function App() {
             <div className="control">
               <textarea
                 className="textarea is-link"
-                placeholder="Make yout tweet here!"
+                placeholder="Haz tu tweet aqui!"
                 value={textTweet}
                 onChange={event => setTextTweet(event.target.value)}
               ></textarea>

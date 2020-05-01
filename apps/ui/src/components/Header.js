@@ -14,8 +14,8 @@ function Header() {
     >
       <div className="container">
         <div className="navbar-brand">
-          <a className="navbar-item" href="https://localhost:5000">
-            <i class="fab fa-twitter-square"></i>
+          <a className="navbar-item" href="http://localhost:5000">
+            <i className="fab fa-twitter-square"></i>
           </a>
 
           <a
