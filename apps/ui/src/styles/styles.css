@@ -1,0 +1,61 @@
+.card, .title, .subtitle, .card-footer-item > span {
+  color: var(--white);
+}
+
+.title {
+  font-size: 1em;
+}
+
+.subtitle {
+  color: darkgrey;
+  font-size: 0.7em;
+}
+
+.textarea {
+  background-color: var(--main-bg-color);
+  color: var(--white);
+}
+
+.textarea::placeholder {
+  color: var(--bg-color);
+}
+
+.is-link.textarea {
+  border-color: var(--secondary);
+}
+
+.button {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.button:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+a {
+  color: var(--secondary)
+}
+
+i.fab.fa-twitter-square {
+  font-size: 2.5em;
+  color: var(--secondary);
+}
+
+.container-tweets {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.card {
+  border-radius: 5px;
+}
+
+.card-footer {
+  border-top: 1px solid var(--main-bg-color);
+}
+
+.card-footer-item:not(:last-child) {
+  border-right: 1px solid var(--main-bg-color);
+}
