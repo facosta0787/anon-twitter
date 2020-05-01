@@ -26,6 +26,10 @@ code {
   color: var(--white);
 }
 
+.card {
+  border-radius: 5px;
+}
+
 .subtitle {
   color: darkgrey;
 }
@@ -58,4 +62,12 @@ a {
 i.fab.fa-twitter-square {
   font-size: 2.5em;
   color: var(--secondary);
+}
+
+.card-footer {
+  border-top: 1px solid var(--main-bg-color);
+}
+
+.card-footer-item:not(:last-child) {
+  border-right: 1px solid var(--main-bg-color);
 }
