@@ -17,6 +17,9 @@ function App() {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault()
+
+    if (textTweet === '') return false
+
     const response = await fetch('http://localhost:3000/api/tweets', {
       method: 'POST',
       body: JSON.stringify({ tweet: textTweet }),
@@ -28,7 +31,7 @@ function App() {
 
     setTweets([data, ...tweets])
 
-    setTextTweet('')
+    return setTextTweet('')
   }
 
   return (
@@ -47,6 +50,7 @@ function App() {
                     event.stopPropagation()
                     setTextTweet(event.target.value)
                   }}
+                  rows="2"
                 ></textarea>
               </div>
             </div>

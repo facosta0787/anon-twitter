@@ -1,4 +1,7 @@
-.card, .title, .subtitle, .card-footer-item > span {
+.card,
+.title,
+.subtitle,
+.card-footer-item > span {
   color: var(--white);
 }
 
@@ -17,7 +20,7 @@
 }
 
 .textarea::placeholder {
-  color: var(--bg-color);
+  color: rgba(var(--white-rgb), 0.4);
 }
 
 .is-link.textarea {
@@ -25,17 +28,19 @@
 }
 
 .button {
-  background-color: var(--secondary);
-  border-color: var(--secondary);
+  border: none;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--purple) 80%);
 }
 
 .button:hover {
-  background-color: var(--primary);
-  border-color: var(--primary);
+  border: none;
+  color: var(--white);
+  background: linear-gradient(225deg, var(--primary) 0%, var(--purple) 80%);
 }
 
 a {
-  color: var(--secondary)
+  color: var(--secondary);
 }
 
 i.fab.fa-twitter-square {
@@ -44,8 +49,9 @@ i.fab.fa-twitter-square {
 }
 
 .container-tweets {
-  width: 40%;
+  width: 95%;
   margin: 0 auto;
+  max-width: 550px;
 }
 
 .card {
@@ -54,8 +60,32 @@ i.fab.fa-twitter-square {
 
 .card-footer {
   border-top: 1px solid var(--main-bg-color);
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-footer > button {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 15px;
 }
 
 .card-footer-item:not(:last-child) {
   border-right: 1px solid var(--main-bg-color);
+}
+
+
+.link-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+.link-button:hover,
+.link-button:focus {
+text-decoration: none;
 }

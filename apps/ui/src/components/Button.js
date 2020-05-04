@@ -1,4 +1,4 @@
-import React, { Children } from 'react'
+import React from 'react'
 
 function Button(props) {
   const {children, type, onClick} = props
@@ -7,7 +7,7 @@ function Button(props) {
       style={{
         minWidth: 120,
       }}
-      className="button"
+      className="button is-small link-button"
       type={type}
       onClick={onClick}
     >

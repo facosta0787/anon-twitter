@@ -13,20 +13,9 @@ function Header() {
       aria-label="main navigation"
     >
       <div className="container">
-        <div className="navbar-brand">
+        <div className="navbar-brand" style={styles.brand}>
           <a className="navbar-item" href="http://localhost:5000">
-            <i className="fab fa-twitter-square"></i>
-          </a>
-
-          <a
-            role="button"
-            className="navbar-burger"
-            aria-label="menu"
-            aria-expanded="false"
-          >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
+            <i className="far fa-comments" style={styles.icon}></i>
           </a>
         </div>
       </div>
@@ -34,4 +23,14 @@ function Header() {
   )
 }
 
+const styles = {
+  brand: {
+    justifyContent: 'center',
+  },
+  icon: {
+    fontSize: 25,
+  }
+}
+
 export default Header
+

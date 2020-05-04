@@ -1,9 +1,16 @@
 :root {
-  --main-bg-color: #222831;
-  --bg-color: #393e46;
-  --primary: #00adb5;
-  --secondary: #00fff5;
-  --white: #fff;
+  --bg-color: #27292C;
+  --main-bg-color: #202225;
+  --primary: #0085EF;
+  --secondary: #00A1EA;
+  --tercero: #00C95F;
+  --purple: #b721ff;
+  --white: #ffffff;
+  --white-rgb: 255, 255, 255;
+}
+
+html {
+  background-color: var(--main-bg-color);
 }
 
 body {
