@@ -68,12 +68,13 @@ i.fab.fa-twitter-square {
 .card-footer > button {
   color: rgba(255, 255, 255, 0.5);
   font-size: 15px;
+  background-color: transparent;
+  border: none;
 }
 
 .card-footer-item:not(:last-child) {
   border-right: 1px solid var(--main-bg-color);
 }
-
 
 .link-button {
   background-color: transparent;
@@ -87,5 +88,5 @@ i.fab.fa-twitter-square {
 
 .link-button:hover,
 .link-button:focus {
-text-decoration: none;
+  text-decoration: none;
 }

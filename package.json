@@ -2,9 +2,14 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "ui": "npm start --prefix ./apps/ui",
-    "api": "npm run dev --prefix ./apps/api",
-    "dev": "concurrently -n api,ui \"npm run api\" \"npm run ui\""
+    "ui":         "npm start --prefix ./apps/ui",
+    "api":        "npm run dev --prefix ./apps/api",
+    "dev":        "concurrently -n api,ui \"npm run api\" \"npm run ui\"",
+    "build:api":  "docker build -t twitter-api . -f apps/api/Dockerfile",
+    "build:ui":   "docker build -t twitter-ui . -f apps/ui/Dockerfile",
+    "docker:api": "docker run --rm -d -p 3000:3000 twitter-api",
+    "docker:ui":  "docker run --rm -d -p 5000:5000 twitter-ui",
+    "docker:rmi": "docker rmi $(docker images -f=reference='twitter*:*' -q)"
   },
   "devDependencies": {
     "lerna": "^3.20.2"

@@ -3,13 +3,15 @@ import Header from './Header'
 import TweetCard from './TweetCard'
 import Button from './Button'
 
+const API = process.env.REACT_APP_API_URL || 'http://localhost:3000'
+
 function App() {
   const [tweets, setTweets] = useState([])
   const [textTweet, setTextTweet] = useState('')
 
   useEffect(() => {
     ;(async () => {
-      const response = await fetch('http://localhost:3000/api/tweets')
+      const response = await fetch(`${API}/api/tweets`)
       const { data } = await response.json()
       setTweets(data)
     })()
@@ -20,7 +22,7 @@ function App() {
 
     if (textTweet === '') return false
 
-    const response = await fetch('http://localhost:3000/api/tweets', {
+    const response = await fetch(`${API}/api/tweets`, {
       method: 'POST',
       body: JSON.stringify({ tweet: textTweet }),
       headers: {
