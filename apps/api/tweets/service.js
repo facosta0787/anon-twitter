@@ -1,3 +1,5 @@
+'use strict'
+
 const db = require('@anon-twitter/db')
 
 async function getAll(req, res) {
