@@ -4,6 +4,7 @@ import TweetCard from './TweetCard'
 import Button from './Button'
 
 const API = process.env.REACT_APP_API_URL || 'http://localhost:3000'
+console.log(`%c api-url: ${API}`, 'color: DodgerBlue')
 
 function App() {
   const [tweets, setTweets] = useState([])

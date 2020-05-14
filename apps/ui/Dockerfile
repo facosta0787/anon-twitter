@@ -6,11 +6,15 @@ RUN mkdir -p apps/ui
 
 COPY apps/ui apps/ui
 
-RUN npm install --prefix apps/ui/ && \
-  npm run build --prefix apps/ui/
+WORKDIR /anon-twitter/apps/ui
+
+ARG API
+
+ENV API_URL $API
+
+RUN npm install && \
+  REACT_APP_API_URL=$(echo $API_URL) node node_modules/react-scripts/bin/react-scripts build
 
 EXPOSE 5000
-
-WORKDIR /anon-twitter/apps/ui
 
 CMD [ "npx", "serve", "-s", "build" ]

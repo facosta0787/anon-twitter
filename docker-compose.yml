@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  api:
+    build:
+      context: ./
+      dockerfile: ./apps/api/Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - "./storage:/anon-twitter/storage"
+
+  ui:
+    build:
+      context: ./
+      dockerfile: ./apps/ui/Dockerfile
+      args:
+        API: http://localhost:3000
+    ports:
+      - "5000:5000"
