@@ -6,7 +6,7 @@ const cookieParser = require('cookie-parser')
 const logger = require('morgan')
 const cors = require('cors')
 const helmet = require('helmet')
-const db = require('@anon-twitter/db')
+const db = require('database')
 
 const tweets = require('./tweets/router')
 

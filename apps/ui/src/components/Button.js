@@ -7,7 +7,7 @@ function Button(props) {
       style={{
         minWidth: 120,
       }}
-      className="button is-small link-button"
+      className="button link-button"
       type={type}
       onClick={onClick}
     >

@@ -16,6 +16,7 @@ function Header() {
         <div className="navbar-brand" style={styles.brand}>
           <a className="navbar-item" href="http://localhost:5000">
             <i className="far fa-comments" style={styles.icon}></i>
+            &nbsp;&nbsp;<span style={styles.title}>ANONYMOUS TWEET</span>
           </a>
         </div>
       </div>
@@ -29,6 +30,11 @@ const styles = {
   },
   icon: {
     fontSize: 25,
+  },
+  title: {
+    fontSize: '1.3rem',
+    fontWeight: 'bold',
+    fontFamily: `source-code-pro, Menlo, Monaco, Consolas, 'Courier New',monospace`
   }
 }
 

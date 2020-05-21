@@ -4,17 +4,15 @@
   "scripts": {
     "ui":         "npm start --prefix ./apps/ui",
     "api":        "npm run dev --prefix ./apps/api",
-    "dev":        "concurrently -n api,ui \"npm run api\" \"npm run ui\"",
+    "dev":        "npx concurrently -n api,ui \"npm run api\" \"npm run ui\"",
     "build:api":  "docker build -t twitter-api . -f apps/api/Dockerfile",
     "build:ui":   "docker build -t twitter-ui . -f apps/ui/Dockerfile",
     "docker:api": "docker run --rm -d -p 3000:3000 twitter-api",
     "docker:ui":  "docker run --rm -d -p 5000:5000 twitter-ui",
     "docker:rmi": "docker rmi $(docker images -f=reference='*twitter*:*' -q) \n docker rmi $(docker images --filter 'dangling=true' -q)"
   },
-  "devDependencies": {
-    "lerna": "^3.20.2"
-  },
   "dependencies": {
-    "concurrently": "^5.2.0"
+    "concurrently": "^5.2.0",
+    "lerna": "^3.20.2"
   }
 }

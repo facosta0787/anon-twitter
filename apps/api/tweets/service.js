@@ -1,6 +1,6 @@
 'use strict'
 
-const db = require('@anon-twitter/db')
+const db = require('database')
 
 async function getAll(req, res) {
   const tweets = await db.Tweet.findAll({
